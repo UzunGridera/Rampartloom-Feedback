@@ -1,0 +1,58 @@
+name: Beta feedback
+description: Share what feels good, confusing, unfair, or worth improving.
+title: "[Feedback] "
+labels:
+  - feedback
+  - needs-triage
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for testing Rampartloom. This ticket will be public. Do not include personal data, passwords, account IDs, logs, support ZIPs, crash dumps, raw JSON or private files.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Feedback area
+      options:
+        - Overall experience
+        - Towers and upgrades
+        - Assault units and income
+        - Bots and difficulty
+        - Interface and controls
+        - Graphics and readability
+        - Sound and music
+        - Performance
+        - Accessibility
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: enjoyed
+    attributes:
+      label: What worked well?
+      description: Tell us what you enjoyed or want the game to keep.
+      placeholder: I liked...
+    validations:
+      required: true
+  - type: textarea
+    id: improve
+    attributes:
+      label: What should change?
+      description: Describe one improvement and why it would help.
+      placeholder: I would change...
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Optional safe context
+      description: You may include the game mode, match phase, resolution and input type. Do not paste logs or IDs.
+      placeholder: Local Match, around minute 12, 1920x1080, controller...
+  - type: checkboxes
+    id: public_safety
+    attributes:
+      label: Public ticket safety
+      options:
+        - label: I understand this issue is public and I did not include personal data, passwords, account IDs, logs, support ZIPs, crash dumps, raw JSON or private files.
+          required: true
+

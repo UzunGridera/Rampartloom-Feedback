@@ -1,0 +1,75 @@
+name: Bug report
+description: Report a reproducible problem in the Rampartloom beta.
+title: "[Bug] "
+labels:
+  - beta-bug
+  - needs-triage
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting a bug. This ticket will be public. Do not include personal data, passwords, account IDs, logs, support ZIPs, crash dumps, raw JSON or private files.
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Game mode
+      options:
+        - Local Match
+        - Pressure Gauntlet
+        - Maze Lab
+        - Sandbox
+        - Bot Training
+        - Bot Development
+        - Main menu or Settings
+        - Online beta
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      placeholder: Describe the visible problem without pasting logs or IDs.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Start...
+        2. Select...
+        3. Observe...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+      placeholder: I expected...
+    validations:
+      required: true
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: Frequency
+      options:
+        - Once
+        - Sometimes
+        - Every time
+    validations:
+      required: true
+  - type: input
+    id: safe_context
+    attributes:
+      label: Optional safe setup details
+      description: Resolution, input type and graphics quality only. Do not provide account, device or network identifiers.
+      placeholder: 1920x1080, controller, High quality
+  - type: checkboxes
+    id: public_safety
+    attributes:
+      label: Public ticket safety
+      options:
+        - label: I understand this issue is public and I did not include personal data, passwords, account IDs, logs, support ZIPs, crash dumps, raw JSON or private files.
+          required: true
+
